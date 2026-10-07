@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 40 14% 94%;
+        --foreground: 0 0% 4%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 4%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 4%;
+        --primary: 0 0% 6%;
+        --primary-foreground: 40 14% 96%;
+        --secondary: 40 10% 90%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 40 8% 88%;
+        --muted-foreground: 240 4% 40%;
+        --accent: 40 10% 90%;
+        --accent-foreground: 0 0% 9%;
+        --destructive: 0 72% 45%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 88%;
+        --input: 0 0% 84%;
+        --ring: 22 82% 41%;
+        --brand: 24 79% 41%;
+        --brand-hover: 22 82% 34%;
+        --radius: 0.25rem;
+    }
+    .dark {
+        --background: 0 0% 2%;
+        --foreground: 240 5% 96%;
+        --card: 0 0% 8%;
+        --card-foreground: 240 5% 96%;
+        --popover: 0 0% 8%;
+        --popover-foreground: 240 5% 96%;
+        --primary: 240 5% 96%;
+        --primary-foreground: 0 0% 6%;
+        --secondary: 0 0% 11%;
+        --secondary-foreground: 240 5% 96%;
+        --muted: 0 0% 11%;
+        --muted-foreground: 240 4% 64%;
+        --accent: 0 0% 11%;
+        --accent-foreground: 240 5% 96%;
+        --destructive: 0 62% 45%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 17%;
+        --input: 0 0% 17%;
+        --ring: 15 78% 51%;
+        --brand: 15 78% 51%;
+        --brand-hover: 15 74% 45%;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body {
+        @apply bg-background text-foreground font-sans;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    html { scroll-behavior: auto; }
+    ::selection { background: hsl(var(--brand)); color: #fff; }
+}
+
+@layer utilities {
+    .font-serif { font-family: '"Cormorant Garamond"', serif; }
+    .text-brand { color: hsl(var(--brand)); }
+    .bg-brand { background-color: hsl(var(--brand)); }
+    .glass {
+        background: hsl(var(--background) / 0.6);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+    .grain::before {
+        content: "";
+        position: absolute; inset: 0; pointer-events: none; z-index: 1;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .clip-arch { clip-path: inset(0 round 200px 200px 8px 8px); }
+    .line-mask { overflow: hidden; display: block; }
+}
+
+/* Custom cursor: hide native on desktop */
+@media (pointer: fine) {
+    .cursor-hidden, .cursor-hidden * { cursor: none !important; }
+}
+
+@keyframes marquee-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.marquee-track {
+    display: inline-flex; white-space: nowrap; will-change: transform;
+    animation: marquee-x 32s linear infinite;
+}
+.marquee-slow { animation-duration: 48s; }
+
+@layer base {
+    [data-debug-wrapper="true"] { display: contents !important; }
+}
