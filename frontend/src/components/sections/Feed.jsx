@@ -40,36 +40,36 @@ export function Testimonials() {
             <ChevronRight size={18} />
           </button>
         </div>
-        <p className="mt-6 text-xs text-muted-foreground">Placeholder testimonials — replace with real client quotes anytime.</p>
+        {/* <p className="mt-6 text-xs text-muted-foreground">Placeholder testimonials — replace with real client quotes anytime.</p> */}
       </div>
     </section>
   );
 }
 
 export function Blog() {
-  return (
-    <section id="blog" className="relative py-24 md:py-32" data-testid="blog-section">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <SectionHeading no="09" label="Journal" title={<>Writing &<br />thoughts.</>} className="mb-14" />
-        <div className="grid md:grid-cols-3 gap-8">
-          {blogPosts.map((b, idx) => (
-            <Reveal key={b.slug} delay={idx * 0.08}>
-              <article className="group cursor-pointer" data-testid={`blog-card-${b.slug}`}>
-                <div className="relative overflow-hidden aspect-[4/3] border border-border">
-                  <img src={b.cover} alt={b.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <span className="absolute top-4 left-4 px-3 py-1 glass border border-border text-xs uppercase tracking-[0.15em]">{b.tag}</span>
-                </div>
-                <div className="mt-5">
-                  <p className="text-sm text-muted-foreground mb-2">{b.date} · {b.readTime}</p>
-                  <h3 className="font-serif text-2xl tracking-tight group-hover:text-brand transition-colors">{b.title}</h3>
-                  <p className="text-muted-foreground mt-2">{b.excerpt}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-        <p className="mt-10 text-xs text-muted-foreground">Sample posts — ready for a future CMS integration.</p>
-      </div>
-    </section>
-  );
+  // return (
+  //   <section id="blog" className="relative py-24 md:py-32" data-testid="blog-section">
+  //     <div className="max-w-7xl mx-auto px-6 md:px-12">
+  //       <SectionHeading no="09" label="Journal" title={<>Writing &<br />thoughts.</>} className="mb-14" />
+  //       <div className="grid md:grid-cols-3 gap-8">
+  //         {blogPosts.map((b, idx) => (
+  //           <Reveal key={b.slug} delay={idx * 0.08}>
+  //             <article className="group cursor-pointer" data-testid={`blog-card-${b.slug}`}>
+  //               <div className="relative overflow-hidden aspect-[4/3] border border-border">
+  //                 <img src={b.cover} alt={b.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+  //                 <span className="absolute top-4 left-4 px-3 py-1 glass border border-border text-xs uppercase tracking-[0.15em]">{b.tag}</span>
+  //               </div>
+  //               <div className="mt-5">
+  //                 <p className="text-sm text-muted-foreground mb-2">{b.date} · {b.readTime}</p>
+  //                 <h3 className="font-serif text-2xl tracking-tight group-hover:text-brand transition-colors">{b.title}</h3>
+  //                 <p className="text-muted-foreground mt-2">{b.excerpt}</p>
+  //               </div>
+  //             </article>
+  //           </Reveal>
+  //         ))}
+  //       </div>
+  //       <p className="mt-10 text-xs text-muted-foreground">Sample posts — ready for a future CMS integration.</p>
+  //     </div>
+  //   </section>
+  // );
 }

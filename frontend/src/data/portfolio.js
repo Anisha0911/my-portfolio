@@ -376,19 +376,19 @@ export const testimonials = [
   {
     quote:
       "Anisha turned our outdated site into a fast, modern React experience. She's meticulous and easy to work with.",
-    name: "Client Placeholder",
+    name: "Client",
     role: "Founder, Startup",
   },
   {
     quote:
       "Reliable, detail-obsessed and quick. She handled both front-end and back-end and delivered ahead of schedule.",
-    name: "Client Placeholder",
+    name: "Client",
     role: "Product Manager",
   },
   {
     quote:
       "The admin dashboard she built lets our team publish without any developer help. Exactly what we needed.",
-    name: "Client Placeholder",
+    name: "Client",
     role: "Operations Lead",
   },
 ];
