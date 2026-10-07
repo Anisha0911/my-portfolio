@@ -27,7 +27,7 @@ export const personal = {
     "https://customer-assets-eiarnc6j.emergentagent.net/job_a9f2b30f-fbb7-4583-bec2-ffa05f48aa90/artifacts/p9qc3uf4_Anisha%20Resume.pdf",
   // Replace this placeholder with your own professional portrait.
   photo:
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdCUyMHN0dWRpbyUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4NTk0OTI0MXww&ixlib=rb-4.1.0&q=85",
+    "photo.jpeg",
   socials: [
     { label: "GitHub", icon: "github", url: "https://github.com/" },
     { label: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
